@@ -12,7 +12,7 @@ test "start", ->
   ok req.status == 'running', "expected 'running', got #{req.status}"
   clock.restore()
 
-test "complete", ->
+test "success", ->
   clock = sinon.useFakeTimers()
   server = sinon.fakeServer.create()
   server.autoRespond = true
@@ -72,3 +72,12 @@ test "error", ->
   ok callback.callCount == 1, "expected 1 call, called #{callback.callCount} times"
   ok callback.calledWith(404, "<h1>Not Found</h1>"), "expected success callback"
   clock.restore()
+
+test "stopped", ->
+  callback = sinon.spy()
+  req = new PollingRequest
+    url: "/poll",
+    stopped: callback
+
+  req.stop()
+  ok callback.calledOnce, "expected 1 call"

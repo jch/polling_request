@@ -5,7 +5,7 @@ jQuery helper object for AJAX polling a [progress-aware endpoint](#progress-awar
 ## Usage
 
 ```coffeescript
-req = PollingRequest.new
+req = new PollingRequest
   url: "/states.csv"
   interval: 1000   # polling interval in milliseconds
   progress: (n)->
@@ -14,6 +14,8 @@ req = PollingRequest.new
     console.log "Response body: #{res}"
   error: (status, response)->
     console.log("Status: #{status}, Body: #{response}")
+  complete: (status, response)->
+    console.log("This is called after everything else")
 
 req.status   # 'pending'
 req.start()

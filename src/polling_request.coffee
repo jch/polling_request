@@ -5,6 +5,7 @@
 #  success: callback for response body
 #  progress: callback for integer percentage
 #  error: callback with status code and response body
+#  stopped: callback after request stops
 class PollingRequest
   constructor: (@options) ->
     @progress = 0
@@ -13,6 +14,7 @@ class PollingRequest
     @options.success  or= ->
     @options.progress or= ->
     @options.error    or= ->
+    @options.stopped  or= ->
 
   # Public: schedule polling by `options.interval`
   start: ->
@@ -26,6 +28,7 @@ class PollingRequest
     @status = 'stopped'
     clearInterval(@timer)
     @timer = null
+    @options.stopped()
 
   # Public: one of 'pending', 'running', 'stopped'
   status: ->
