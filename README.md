@@ -1,4 +1,4 @@
-# Polling Request
+# Polling Request [![Build Status](https://secure.travis-ci.org/jch/polling_request.png)](http://travis-ci.org/jch/polling_request)
 
 jQuery helper object for AJAX polling a [progress-aware endpoint](#progress-aware-endpoint).
 
