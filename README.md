@@ -69,3 +69,9 @@ Tests are written with QUnit and can be run in a browser by opening
 ```bash
 $ phantomjs test/runner.js test/test.html
 ```
+
+## Wish List
+
+* RailTie for easy Rails installation
+* Better docs for building and installing project
+* Bower compatibility
