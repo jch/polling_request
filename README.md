@@ -60,3 +60,12 @@ Successful responses can be any content type
 ```
 
 [202]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.3
+
+## Development
+
+Tests are written with QUnit and can be run in a browser by opening
+`test/test.html`. Continuous integration is run with phantomjs:
+
+```bash
+$ phantomjs test/runner.js test/test.html
+```
