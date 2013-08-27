@@ -59,6 +59,21 @@ Successful responses can be any content type
 
 [202]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.3
 
+## Rails
+
+To access PollingRequest from the asset pipeline, add the following to your
+Gemfile:
+
+```ruby
+gem 'polling_request'
+```
+
+And this to your asset manifest:
+
+```javascript
+//= require polling_request
+```
+
 ## Development
 
 Tests are written with QUnit and can be run in a browser by opening
@@ -70,7 +85,6 @@ $ phantomjs test/runner.js test/test.html
 
 ## Wish List
 
-* RailTie for easy Rails installation
 * Better docs for building and installing project
 * Bower compatibility
 * Travis CI
