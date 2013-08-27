@@ -73,6 +73,7 @@ $ phantomjs test/runner.js test/test.html
 * RailTie for easy Rails installation
 * Better docs for building and installing project
 * Bower compatibility
+* Travis CI
 
 ## Contributing
 
