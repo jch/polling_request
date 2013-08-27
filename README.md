@@ -38,22 +38,20 @@ setTimeout ->
 
 PollingRequests will have a header `X-POLLING-REQUEST` set. It expects an HTTP
 endpoint to respond with a [202 Accepted][202] status code when there is more
-processing to be done. The JSON encoded response body must include a 'requestId'
-property for tracking this request. It's value must be unique across requests.
-The body can optionally include a `progress` property whose value is an integer
-0..100 inclusive to indicate the percentage of processing completed.
+processing to be done. The JSON response body can optionally include a
+`progress` property whose value is an integer 0..100 inclusive to indicate the
+percentage of processing completed.
 
 ```bash
-$ curl -i -H'X-POLLING-REQUEST:' http://localhost/endpoint
+$ curl -i http://localhost/endpoint
 HTTP/1.1 202 Accepted
-{ requestId: 'custom-request-uuid', progress: 0 }
+{ progress: 0 }
 
-# subsequent requests will include the requestId
-$ curl -i -H'X-POLLING-REQUEST: custom-request-uuid' http://localhost/endpoint
+$ curl -i http://localhost/endpoint
 HTTP/1.1 202 Accepted
-{ requestId: 'custom-request-uuid', progress: 0 }
+{ progress: 50 }
 
-$ curl -i -H'X-POLLING-REQUEST: custom-request-uuid' http://localhost/endpoint
+$ curl -i http://localhost/endpoint
 HTTP/1.1 200 Success
 Content-Type: text/plain
 Successful responses can be any content type

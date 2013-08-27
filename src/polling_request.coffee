@@ -41,8 +41,6 @@ class PollingRequest
       url: @options.url
       beforeSend: (jqXHR, settings) =>
         @status = 'running'
-        headers:
-          'X-POLLING-REQUEST': @requestId
       statusCode:
         # The request has succeeded.
         200: (data, textStatus, jqXHR) =>
@@ -53,7 +51,6 @@ class PollingRequest
         # The request has been accepted for processing, but the processing has
         # not been completed.
         202: (data, textStatus, jqXHR) =>
-          @requestId = data.requestId
           @progress = data.progress or 0
           @options.progress(data.progress)
       error: (jqXHR, textStatus, errorThrown) =>
