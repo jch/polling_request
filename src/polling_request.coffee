@@ -42,6 +42,9 @@ class PollingRequest
   _run: ->
     $.ajax
       url: @options.url
+      cached: false  # what does 304 not modified mean in this context?
+      accepts:
+        json: 'application/json'
       beforeSend: (jqXHR, settings) =>
         @status = 'running'
       statusCode:
