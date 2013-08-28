@@ -55,7 +55,7 @@ class PollingRequest
         # not been completed.
         202: (data, textStatus, jqXHR) =>
           @progress = data.progress or 0
-          @options.progress(data.progress)
+          @options.progress(@progress)
       error: (jqXHR, textStatus, errorThrown) =>
         @options.error(jqXHR.status, jqXHR.responseText)
         @stop()
