@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.summary     = "Railtie for progress aware AJAX polling"
   s.description = "This gem adds polling_request Javascript assets to Rail's asset pipeline"
   s.files       = %w(lib/polling_request.rb src/polling_request.coffee src/polling_request.js README.md)
+  s.license     = "MIT"
 
   s.add_dependency "railties", ">= 3.0"
 end
