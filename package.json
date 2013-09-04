@@ -8,10 +8,11 @@
   "main"          : "src/polling_request.coffee",
   "version"       : "0.0.1",
   "devDependencies": {
-    "phantomjs": "1.9.0-1"
+    "phantomjs": "1.9.0-1",
+    "sinon": "1.7.3"
   },
   "scripts": {
-    "test": "phantomjs test/runner.js test/test.html"
+    "test": "./node_modules/phantomjs/bin/phantomjs test/runner.js test/test.html"
   },
   "licenses": [
     {

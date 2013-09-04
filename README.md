@@ -78,18 +78,26 @@ And this to your asset manifest:
 
 ## Development
 
+Dependencies are managed by [npm](https://npmjs.org/) and [bower](http://bower.io/).
+
+```bash
+$ npm install
+```
+
+```bash
+$ bower install
+```
+
 Tests are written with QUnit and can be run in a browser by opening
 `test/test.html`. Continuous integration is run with phantomjs:
 
 ```bash
-$ phantomjs test/runner.js test/test.html
+$ ./node_modules/phantomjs/lib/phantom/bin/phantomjs test/runner.js test/test.html
 ```
 
 ## Wish List
 
 * Better docs for building and installing project
-* Bower compatibility
-* Travis CI
 
 ## Contributing
 
