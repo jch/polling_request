@@ -4,8 +4,7 @@
   "description": "Progress aware jQuery AJAX polling requests",
   "homepage": "https://github.com/jch/polling_request",
   "main": [
-    "src/polling_request.js",
-    "LICENSE"
+    "src/polling_request.js"
   ],
   "license": [
     "MIT",
