@@ -9,7 +9,8 @@
   "version"       : "0.0.1",
   "devDependencies": {
     "phantomjs": "1.9.0-1",
-    "sinon": "1.7.3"
+    "sinon": "1.7.3",
+    "bower": "1.2.6"
   },
   "scripts": {
     "test": "./node_modules/phantomjs/bin/phantomjs test/runner.js test/test.html"
