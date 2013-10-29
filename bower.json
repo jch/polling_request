@@ -1,0 +1,34 @@
+{
+  "name": "polling-request",
+  "version": "0.0.2",
+  "description": "Progress aware jQuery AJAX polling requests",
+  "homepage": "https://github.com/jch/polling_request",
+  "main": [
+    "src/polling_request.js"
+  ],
+  "license": [
+    "MIT",
+    "https://raw.github.com/jch/polling_request/master/LICENSE"
+  ],
+  "authors": [
+    "Jerry Cheung <jch@whatcodecraves.com>"
+  ],
+  "keywords": [
+    "util",
+    "jquery",
+    "ajax"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  },
+  "devDependencies": {
+    "qunit": "1.12.0",
+    "coffee-script": "1.6.3"
+  }
+}
