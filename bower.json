@@ -20,6 +20,10 @@
   ],
   "ignore": [
     "**/.*",
+    "package.json",
+    "polling_request.gemspec",
+    "Rakefile",
+    "lib",
     "node_modules",
     "bower_components",
     "test"
