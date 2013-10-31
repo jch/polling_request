@@ -6,7 +6,7 @@
   "author"        : "Jerry Cheung <jch@whatcodecraves.com>",
   "repository"    : {"type": "git", "url": "https://github.com/jch/polling_request.git"},
   "main"          : "src/polling_request.coffee",
-  "version"       : "0.0.1",
+  "version"       : "0.0.3",
   "devDependencies": {
     "phantomjs": "1.9.0-1",
     "sinon": "1.7.3",

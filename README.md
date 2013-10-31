@@ -76,9 +76,17 @@ And this to your asset manifest:
 //= require polling_request
 ```
 
+## Bower
+
+PollingRequest is in the [Bower registry](http://sindresorhus.com/bower-components/).  JavaScript and CoffeeScript sources are included.
+
+```bash
+$ bower install polling-request
+```
+
 ## Development
 
-Dependencies are managed by [npm](https://npmjs.org/) and [bower](http://bower.io/).
+Dependencies are managed by [npm](https://npmjs.org/) and [Bower](http://bower.io/).
 
 ```bash
 $ npm install

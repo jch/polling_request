@@ -1,6 +1,6 @@
 {
   "name": "polling-request",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Progress aware jQuery AJAX polling requests",
   "homepage": "https://github.com/jch/polling_request",
   "main": [
@@ -20,6 +20,10 @@
   ],
   "ignore": [
     "**/.*",
+    "package.json",
+    "polling_request.gemspec",
+    "Rakefile",
+    "lib",
     "node_modules",
     "bower_components",
     "test"
